@@ -78,12 +78,12 @@ public class MainActivity extends Activity {
         startActivity(intent);
     }
     public void btn_StreetLamp(View v) {
-        Uri uri = Uri.parse("https://parkingsms.jeonju.go.kr ");
+        Uri uri = Uri.parse("http://ws.roadlighting.kr/slamp");
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(intent);
     }
     public void btn_Hall(View v) {
-        Uri uri = Uri.parse("https://parkingsms.jeonju.go.kr ");
+        Uri uri = Uri.parse("http://edu.jeonju.go.kr");
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(intent);
     }

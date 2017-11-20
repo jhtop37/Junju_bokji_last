@@ -39,17 +39,17 @@
                    >
 
                     <Button
-                        android:id="@+id/btnPeopleless12"
+                        android:id="@+id/btnnewnews"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
-                        android:onClick="btn_Peopleless"
+                            android:onClick="btn_Newnews"
                         android:text="새 소 식" />
 
                     <Button
-                        android:id="@+id/btnPeopleless22"
+                        android:id="@+id/btnnewbook"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
-                        android:onClick="btn_Peopleless"
+                        android:onClick="btn_Newbook"
                         android:text="신 간 도 서 정 보" />
 
                     <Button
@@ -141,7 +141,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="90dp"
                         android:onClick="btn_Hall"
-                        android:text="강 당 무 료 사 용 신 청" />
+                        android:text="교 육 통 합 프 로 그 램" />
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="10dp"
