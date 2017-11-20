@@ -143,7 +143,6 @@
                         android:onClick="btn_Hall"
                         android:text="교 육 통 합 프 로 그 램" />
                     <ImageView
-                        android:id="@+id/imageView3"
                         android:layout_width="match_parent"
                         android:layout_height="10dp"
                         android:layout_weight="1.43"
