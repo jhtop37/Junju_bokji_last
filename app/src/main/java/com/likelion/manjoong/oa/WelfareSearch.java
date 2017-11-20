@@ -25,7 +25,7 @@ public class WelfareSearch extends Activity {
     resAdapter adapter;
     int Addition = 1;
     ArrayList<restaurant> storage = new ArrayList<>();
-    ///////////////////////////////////////////////
+    /////////////////////////////////////////////////
 
     EditText edit;
     TextView text;
@@ -225,12 +225,12 @@ public class WelfareSearch extends Activity {
         final String phone[]=arr[1].split("기관 전화번호 :");
         final String target[]=arr[2].split("수혜 대상 :");
         final String content[]=arr[3].split("복지내용 :");
+        final String memo[] = arr[4].split("안내사항 :");
         int size=title.length;
         adapter = new resAdapter(storage,this);
-        String[] menu = {"123","123","123"};
 
         for(int i =1;i<size;i++){
-            storage.add(new restaurant(title[i], phone[i], target[i], "11111", content[i], 1));
+            storage.add(new restaurant(title[i], phone[i], target[i], memo[i], content[i], 1));
         }
         listview.setAdapter(adapter);
 
@@ -400,6 +400,8 @@ public class WelfareSearch extends Activity {
                             target.append(arr[3].toString());
                             ///////////////content 따오기//////////////////
                             content.append(arr[1].toString());
+                            ///////////////memo 따오기//////////////////
+                            memo.append(arr[4].toString());
                         }
                         break;
 
@@ -426,7 +428,7 @@ public class WelfareSearch extends Activity {
 //        buffer.append("파싱 끝\n");
 
 
-        return title.toString()+"###"+phone.toString()+"###"+target.toString()+"###"+content.toString();//StringBuffer 문자열 객체 반환
+        return title.toString()+"###"+phone.toString()+"###"+target.toString()+"###"+content.toString()+"###"+memo.toString();//StringBuffer 문자열 객체 반환
 
     }//getXmlData method....
 
