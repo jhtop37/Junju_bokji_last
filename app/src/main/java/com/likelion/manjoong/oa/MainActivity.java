@@ -51,6 +51,21 @@ public class MainActivity extends Activity {
         tabHost1.addTab(ts4);
 
     }
+    public void btn_Newnews(View v) {
+        Uri uri = Uri.parse("http://www.jeonju.go.kr/planweb/board/list.9is?contentUid=9be517a74f8dee91014f9194f6070bf8&boardUid=9be517a74f8dee91014f90e8502d0602&contentUid=9be517a74f8dee91014f9194f6070bf8");
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
+    }
+    public void btn_Newbook(View v) {
+        Uri uri = Uri.parse("http://www.jeonju.go.kr/common/search/search.jsp");
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
+    }
+    public void btn_Education(View v) {
+        Uri uri = Uri.parse("http://www.jeonju.go.kr/common/search/search.jsp");
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
+    }
     public void btn_ServiceSearch(View v) {
         Intent intent = new Intent(MainActivity.this, WelfareSearch.class);
         startActivity(intent);
