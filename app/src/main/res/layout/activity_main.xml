@@ -43,21 +43,21 @@
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
                         android:onClick="btn_Peopleless"
-                        android:text="새소식" />
+                        android:text="새 소 식" />
 
                     <Button
                         android:id="@+id/btnPeopleless22"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
                         android:onClick="btn_Peopleless"
-                        android:text="신간 도서 정보" />
+                        android:text="신 간 도 서 정 보" />
 
                     <Button
                         android:id="@+id/btnPeopleless33"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
                         android:onClick="btn_Peopleless"
-                        android:text="교육 프로그램 정보" />
+                        android:text="교 육 프 로 그 램 정 보" />
 
                     <ImageView
                         android:id="@+id/imageView3"
@@ -112,7 +112,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="90dp"
                         android:onClick="btn_Police"
-                        android:text="지구대 위치"
+                        android:text="지 구 대 위 치"
                         android:textDirection="ltr" />
 
                     <Button
@@ -120,28 +120,28 @@
                         android:layout_width="match_parent"
                         android:layout_height="90dp"
                         android:onClick="btn_Peopleless"
-                        android:text="무인 민원 발급 정보" />
+                        android:text="무 인 민 원 발 급 정 보" />
 
                     <Button
                         android:id="@+id/btnParking"
                         android:layout_width="match_parent"
                         android:layout_height="90dp"
                         android:onClick="btn_Parking"
-                        android:text="주정차 문자알림" />
+                        android:text="주 정 차 문 자 알 림" />
 
                     <Button
                         android:id="@+id/btnStreetLamp"
                         android:layout_width="match_parent"
                         android:layout_height="90dp"
                         android:onClick="btn_StreetLamp"
-                        android:text="가로등 고장 신고" />
+                        android:text="가 로 등 고 장 신 고" />
 
                     <Button
                         android:id="@+id/btnHall"
                         android:layout_width="match_parent"
                         android:layout_height="90dp"
                         android:onClick="btn_Hall"
-                        android:text="강당 무료사용신청" />
+                        android:text="강 당 무 료 사 용 신 청" />
                     <ImageView
                         android:id="@+id/imageView3"
                         android:layout_width="match_parent"
