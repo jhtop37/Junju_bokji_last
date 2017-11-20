@@ -22,41 +22,50 @@
                 android:layout_width="match_parent"
                 android:layout_height="52dp"
                 android:layout_alignParentBottom="true"
-
                 />
 
             <FrameLayout
                 android:id="@android:id/tabcontent"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="10">
+                >
 
                 <LinearLayout
                     android:id="@+id/tab1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
+                    android:layout_weight="10"
                    >
 
-                    <TextView
-                        android:id="@+id/textView2"
+                    <Button
+                        android:id="@+id/btnPeopleless12"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="TextView" />
+                        android:layout_height="150dp"
+                        android:onClick="btn_Peopleless"
+                        android:text="새소식" />
 
-                    <ListView
-                        android:layout_width="wrap_content"
-                        android:layout_height="195dp"
-                        android:layout_weight="8" />
+                    <Button
+                        android:id="@+id/btnPeopleless22"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:onClick="btn_Peopleless"
+                        android:text="신간 도서 정보" />
+
+                    <Button
+                        android:id="@+id/btnPeopleless33"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:onClick="btn_Peopleless"
+                        android:text="교육 프로그램 정보" />
 
                     <ImageView
                         android:id="@+id/imageView3"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
+                        android:layout_height="10dp"
+                        android:layout_weight="1.43"
                         android:scaleType="fitXY"
-                        app:srcCompat="@drawable/banner" />
+                        android:src="@drawable/banner" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -68,23 +77,28 @@
                     <Button
                         android:id="@+id/btnServiceSearch"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="150dp"
                         android:onClick="btn_ServiceSearch"
-                        android:text="복지 서비스 찾기" />
-
+                        android:text="복 지 정 보 서 비 스 " />
                     <Button
                         android:id="@+id/btnFacilitySearch"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="150dp"
                         android:onClick="btn_FacilitySearch"
-                        android:text="복지 시설 찾기" />
-
+                        android:text="복 지 시 설 현 황" />
                     <Button
                         android:id="@+id/btnFreeEat"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="150dp"
                         android:onClick="btn_FreeEat"
-                        android:text="무료 급식소" />
+                        android:text="무 료 급 식 소" />
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_weight="1.43"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/banner" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -96,37 +110,45 @@
                     <Button
                         android:id="@+id/btnPolice"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="90dp"
                         android:onClick="btn_Police"
-                        android:text="지구대 위치" />
+                        android:text="지구대 위치"
+                        android:textDirection="ltr" />
 
                     <Button
                         android:id="@+id/btnPeopleless"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="90dp"
                         android:onClick="btn_Peopleless"
                         android:text="무인 민원 발급 정보" />
 
                     <Button
                         android:id="@+id/btnParking"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="90dp"
                         android:onClick="btn_Parking"
                         android:text="주정차 문자알림" />
 
                     <Button
                         android:id="@+id/btnStreetLamp"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="90dp"
                         android:onClick="btn_StreetLamp"
                         android:text="가로등 고장 신고" />
 
                     <Button
                         android:id="@+id/btnHall"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="90dp"
                         android:onClick="btn_Hall"
                         android:text="강당 무료사용신청" />
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_weight="1.43"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/banner" />
 
                 </LinearLayout>
 
@@ -139,6 +161,13 @@
                     <ListView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent" />
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_weight="1.43"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/banner" />
                 </LinearLayout>
             </FrameLayout>
         </LinearLayout>
