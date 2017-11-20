@@ -1,11 +1,19 @@
 package com.likelion.manjoong.oa;
 
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.app.Activity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TabHost;
+import android.util.Log;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+import android.content.Context;
+import android.widget.TabHost.OnTabChangeListener;
+import android.widget.ImageButton;
+import android.net.Uri;
 
 /**
  *  애플리케이션을 실행하면 제일 처음에 보이는 액티비티
@@ -14,29 +22,76 @@ import android.widget.Button;
  *  개발단계에서는 버튼을 클릭함으로써 MenuActivity로 전환
  */
 
-public class MainActivity extends AppCompatActivity {
-
+public class MainActivity extends Activity {
+    TabHost tabHost;
+    Context context = MainActivity.this;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        /*
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }*/
+        TabHost tabHost1 = (TabHost) findViewById(R.id.tabHost1);
+        tabHost1.setup();
 
-        //개발단계에서는 버튼을 이용한 화면전환(임시)
-        Button btnStart = (Button) findViewById(R.id.btnStart);
-        btnStart.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent myIntent = new Intent(getApplicationContext(), MenuActivity.class);
-                startActivity(myIntent);
-            }
-        });
+        // 첫 번째 Tab. (탭 표시 텍스트:"TAB 1"), (페이지 뷰:"content1")
+        TabHost.TabSpec ts1 = tabHost1.newTabSpec("Tab Spec 1");
+        ts1.setContent(R.id.tab1);
+        ts1.setIndicator("소 식");
+        tabHost1.addTab(ts1);
+
+        // 두 번째 Tab. (탭 표시 텍스트:"TAB 2"), (페이지 뷰:"content2")
+        TabHost.TabSpec ts2 = tabHost1.newTabSpec("Tab Spec 2");
+        ts2.setContent(R.id.tab2);
+        ts2.setIndicator("복 지");
+        tabHost1.addTab(ts2);
+
+        // 세 번째 Tab. (탭 표시 텍스트:"TAB 3"), (페이지 뷰:"content3")
+        TabHost.TabSpec ts3 = tabHost1.newTabSpec("Tab Spec 3");
+        ts3.setContent(R.id.tab3);
+        ts3.setIndicator("생 활");
+        tabHost1.addTab(ts3);
+
+        // 네 번째 Tab. (탭 표시 텍스트:"TAB 4"), (페이지 뷰:"content4")
+        TabHost.TabSpec ts4 = tabHost1.newTabSpec("Tab Spec 4");
+        ts4.setContent(R.id.tab4);
+        ts4.setIndicator("소 통");
+        tabHost1.addTab(ts4);
 
     }
+    public void btn_ServiceSearch(View v) {
+        Intent intent = new Intent(MainActivity.this, WelfareSearch.class);
+        startActivity(intent);
+    }
+    public void btn_FacilitySearch(View v) {
+        Intent intent = new Intent(MainActivity.this, WelfareFacilitySearch.class);
+        startActivity(intent);
+    }
+    public void btn_FreeEat(View v) {
+        Intent intent = new Intent(MainActivity.this, FreeEat.class);
+        startActivity(intent);
+    }
+
+    public void btn_Police(View v) {
+        Intent intent = new Intent(MainActivity.this, PoliceActivity.class);
+        startActivity(intent);
+    }
+    public void btn_Peopleless(View v) {
+        Intent intent = new Intent(MainActivity.this, PeoplelessActivity.class);
+        startActivity(intent);
+    }
+    public void btn_Parking(View v) {
+        Uri uri = Uri.parse("http://www.google.com");
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
+    }
+    public void btn_StreetLamp(View v) {
+        Intent intent = new Intent(MainActivity.this, MainActivity.class);
+        startActivity(intent);
+    }
+    public void btn_Hall(View v) {
+        Intent intent = new Intent(MainActivity.this, MainActivity.class);
+        startActivity(intent);
+    }
 }
+
+
