@@ -31,46 +31,10 @@
                 android:layout_height="match_parent"
                 >
 
+
+
                 <LinearLayout
                     android:id="@+id/tab1"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:layout_weight="10"
-                   >
-
-                    <Button
-                        android:id="@+id/btnPeopleless12"
-                        android:layout_width="match_parent"
-                        android:layout_height="150dp"
-                        android:onClick="btn_Peopleless"
-                        android:text="새 소 식" />
-
-                    <Button
-                        android:id="@+id/btnPeopleless22"
-                        android:layout_width="match_parent"
-                        android:layout_height="150dp"
-                        android:onClick="btn_Peopleless"
-                        android:text="신 간 도 서 정 보" />
-
-                    <Button
-                        android:id="@+id/btnPeopleless33"
-                        android:layout_width="match_parent"
-                        android:layout_height="150dp"
-                        android:onClick="btn_Peopleless"
-                        android:text="교 육 프 로 그 램 정 보" />
-
-                    <ImageView
-                        android:id="@+id/imageView3"
-                        android:layout_width="match_parent"
-                        android:layout_height="10dp"
-                        android:layout_weight="1.43"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/banner" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/tab2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
@@ -94,13 +58,51 @@
                         android:onClick="btn_FreeEat"
                         android:text="무 료 급 식 소" />
                     <ImageView
-                        android:id="@+id/imageView3"
+                        android:id="@+id/imageView1"
                         android:layout_width="match_parent"
                         android:layout_height="10dp"
                         android:layout_weight="1.43"
                         android:scaleType="fitXY"
                         android:src="@drawable/banner"
                         tools:ignore="DuplicateIds" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tab2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="10"
+                    >
+
+                    <Button
+                        android:id="@+id/btn_Newnews"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:onClick="btn_Newnews"
+                        android:text="새 소 식" />
+
+                    <Button
+                        android:id="@+id/btn_Newbook"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:onClick="btn_Newbook"
+                        android:text="신 간 도 서 정 보" />
+
+                    <Button
+                        android:id="@+id/btn_Education"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:onClick="btn_Education"
+                        android:text="교 육 프 로 그 램 정 보" />
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_weight="1.43"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/banner" />
                 </LinearLayout>
 
                 <LinearLayout

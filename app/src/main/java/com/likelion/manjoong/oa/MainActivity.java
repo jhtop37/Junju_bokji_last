@@ -29,13 +29,13 @@ public class MainActivity extends Activity {
         // 첫 번째 Tab. (탭 표시 텍스트:"TAB 1"), (페이지 뷰:"content1")
         TabHost.TabSpec ts1 = tabHost1.newTabSpec("Tab Spec 1");
         ts1.setContent(R.id.tab1);
-        ts1.setIndicator("소 식");
+        ts1.setIndicator("복 지");
         tabHost1.addTab(ts1);
 
         // 두 번째 Tab. (탭 표시 텍스트:"TAB 2"), (페이지 뷰:"content2")
         TabHost.TabSpec ts2 = tabHost1.newTabSpec("Tab Spec 2");
         ts2.setContent(R.id.tab2);
-        ts2.setIndicator("복 지");
+        ts2.setIndicator("소 식");
         tabHost1.addTab(ts2);
 
         // 세 번째 Tab. (탭 표시 텍스트:"TAB 3"), (페이지 뷰:"content3")
