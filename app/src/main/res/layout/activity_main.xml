@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -39,24 +40,24 @@
                    >
 
                     <Button
-                        android:id="@+id/btnnewnews"
+                        android:id="@+id/btnPeopleless12"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
-                            android:onClick="btn_Newnews"
+                        android:onClick="btn_Peopleless"
                         android:text="새 소 식" />
 
                     <Button
-                        android:id="@+id/btnnewbook"
+                        android:id="@+id/btnPeopleless22"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
-                        android:onClick="btn_Newbook"
+                        android:onClick="btn_Peopleless"
                         android:text="신 간 도 서 정 보" />
 
                     <Button
-                        android:id="@+id/btneducation"
+                        android:id="@+id/btnPeopleless33"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
-                        android:onClick="btn_Education"
+                        android:onClick="btn_Peopleless"
                         android:text="교 육 프 로 그 램 정 보" />
 
                     <ImageView
@@ -98,7 +99,8 @@
                         android:layout_height="10dp"
                         android:layout_weight="1.43"
                         android:scaleType="fitXY"
-                        android:src="@drawable/banner" />
+                        android:src="@drawable/banner"
+                        tools:ignore="DuplicateIds" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -141,13 +143,15 @@
                         android:layout_width="match_parent"
                         android:layout_height="90dp"
                         android:onClick="btn_Hall"
-                        android:text="교 육 통 합 프 로 그 램" />
+                        android:text="강 당 무 료 사 용 신 청" />
                     <ImageView
+                        android:id="@+id/imageView3"
                         android:layout_width="match_parent"
                         android:layout_height="10dp"
                         android:layout_weight="1.43"
                         android:scaleType="fitXY"
-                        android:src="@drawable/banner" />
+                        android:src="@drawable/banner"
+                        tools:ignore="DuplicateIds" />
 
                 </LinearLayout>
 
@@ -166,7 +170,8 @@
                         android:layout_height="10dp"
                         android:layout_weight="1.43"
                         android:scaleType="fitXY"
-                        android:src="@drawable/banner" />
+                        android:src="@drawable/banner"
+                        tools:ignore="DuplicateIds" />
                 </LinearLayout>
             </FrameLayout>
         </LinearLayout>
