@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class Main3Activity extends AppCompatActivity {
-    TextView txtname, etmenu1;
+    TextView txtname, etmenu1, date;
     TextView tvTel, tvURL;
     ImageView imageView2;
 
@@ -30,6 +30,8 @@ public class Main3Activity extends AppCompatActivity {
 
         etmenu1 = (TextView) findViewById(R.id.etmenu1);
 
+        date = (TextView) findViewById(R.id.date) ;
+
 
         imageView2 = (ImageView) findViewById(R.id.imageView2);
 
@@ -43,6 +45,8 @@ public class Main3Activity extends AppCompatActivity {
         restaurant r =intent.getParcelableExtra("restaurant");
 
         txtname.setText(r.getName());
+
+        date.setText(r.getDate());
 
 
 
