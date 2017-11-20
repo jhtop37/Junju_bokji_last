@@ -53,10 +53,10 @@
                         android:text="신 간 도 서 정 보" />
 
                     <Button
-                        android:id="@+id/btnPeopleless33"
+                        android:id="@+id/btneducation"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
-                        android:onClick="btn_Peopleless"
+                        android:onClick="btn_Education"
                         android:text="교 육 프 로 그 램 정 보" />
 
                     <ImageView
