@@ -68,7 +68,7 @@ public class MainActivity extends Activity {
         Intent intent = new Intent(MainActivity.this, PoliceActivity.class);
         startActivity(intent);
     }
-    public void btn_Peopleless(View v) {
+    public void btn_Peopleless(View v) {//
         Intent intent = new Intent(MainActivity.this, PeoplelessActivity.class);
         startActivity(intent);
     }
