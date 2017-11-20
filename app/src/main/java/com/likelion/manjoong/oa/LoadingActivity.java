@@ -28,7 +28,7 @@ public class LoadingActivity extends Activity {
             }
         }
     };
-        myThread.start();
+        myThread.start();//df
     }
 }
 
