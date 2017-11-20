@@ -12,7 +12,6 @@ public class restaurant implements Parcelable {
     private String menu;
     private int type;
 
-
     public restaurant(String name, String homepage, String tell, String date, String menu, int type) {
         this.name = name;
         this.homepage = homepage;

@@ -35,10 +35,6 @@ public class WelfareFacilitySearch extends AppCompatActivity
         mapFragment.getMapAsync(this);
 
 
-
-
-
-
     }
 
 
