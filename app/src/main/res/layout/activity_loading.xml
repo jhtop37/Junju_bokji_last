@@ -26,7 +26,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="18dp"
-                app:srcCompat="@mipmap/ic_launcher" />
+                android:src="@drawable/logo_jeonju" />
         </LinearLayout>
     </LinearLayout>
     <LinearLayout
