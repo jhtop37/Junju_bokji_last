@@ -34,7 +34,6 @@ public class WelfareFacilitySearch extends AppCompatActivity
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
-
     }
 
 
