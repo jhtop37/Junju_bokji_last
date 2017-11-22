@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:background="#417f7987"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+        <TextView
+            android:layout_gravity = "center"
+            android:textColor="#000000"
+            android:text="오늘의 말씀"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageButton
+            android:foreground="?attr/selectableItemBackground"
+            android:id="@+id/toolbar_email"
+            android:layout_marginRight="15dp"
+            android:layout_gravity = "right"
+            android:background="@android:drawable/ic_dialog_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </android.support.v7.widget.Toolbar>
+</LinearLayout>

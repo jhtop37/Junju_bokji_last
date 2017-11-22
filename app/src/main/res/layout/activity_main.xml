@@ -1,12 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/drawer_layout">
     >
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        <include layout="@layout/tool_bar"></include>
+    </android.support.design.widget.AppBarLayout>
 
+        <FrameLayout
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:id="@+id/main_framelayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </FrameLayout>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/main_navigationView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity = "start"
+        app:headerLayout="@layout/sidebar"
+        app:menu="@menu/nav_item">
+    </android.support.design.widget.NavigationView>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
     <TabHost
         android:id="@+id/tabHost1"
         android:layout_width="match_parent"
@@ -21,9 +57,9 @@
             <TabWidget
                 android:id="@android:id/tabs"
                 android:layout_width="match_parent"
-                android:layout_height="52dp"
+                android:layout_height="42dp"
                 android:layout_alignParentBottom="true"
-                />
+                android:background="@color/colorPrimary" />
 
             <FrameLayout
                 android:id="@android:id/tabcontent"
@@ -31,40 +67,17 @@
                 android:layout_height="match_parent"
                 >
 
-
-
                 <LinearLayout
                     android:id="@+id/tab1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
-
-                    <Button
-                        android:id="@+id/btnServiceSearch"
-                        android:layout_width="match_parent"
-                        android:layout_height="150dp"
-                        android:onClick="btn_ServiceSearch"
-                        android:text="복 지 정 보 서 비 스 " />
-                    <Button
-                        android:id="@+id/btnFacilitySearch"
-                        android:layout_width="match_parent"
-                        android:layout_height="150dp"
-                        android:onClick="btn_FacilitySearch"
-                        android:text="복 지 시 설 현 황" />
-                    <Button
-                        android:id="@+id/btnFreeEat"
-                        android:layout_width="match_parent"
-                        android:layout_height="150dp"
-                        android:onClick="btn_FreeEat"
-                        android:text="무 료 급 식 소" />
-                    <ImageView
-                        android:id="@+id/imageView1"
-                        android:layout_width="match_parent"
-                        android:layout_height="10dp"
-                        android:layout_weight="1.43"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/banner"
-                        tools:ignore="DuplicateIds" />
+                    <include
+                        android:id="@+id/include_layout1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        layout="@layout/activity_welfare_search">
+                    </include>
                 </LinearLayout>
 
                 <LinearLayout
@@ -74,35 +87,13 @@
                     android:orientation="vertical"
                     android:layout_weight="10"
                     >
+                    <include
+                        android:id="@+id/include_layout2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        layout="@layout/activity_welfare_facility_search">
+                    </include>
 
-                    <Button
-                        android:id="@+id/btn_Newnews"
-                        android:layout_width="match_parent"
-                        android:layout_height="150dp"
-                        android:onClick="btn_Newnews"
-                        android:text="새 소 식" />
-
-                    <Button
-                        android:id="@+id/btn_Newbook"
-                        android:layout_width="match_parent"
-                        android:layout_height="150dp"
-                        android:onClick="btn_Newbook"
-                        android:text="신 간 도 서 정 보" />
-
-                    <Button
-                        android:id="@+id/btn_Education"
-                        android:layout_width="match_parent"
-                        android:layout_height="150dp"
-                        android:onClick="btn_Education"
-                        android:text="교 육 프 로 그 램 정 보" />
-
-                    <ImageView
-                        android:id="@+id/imageView3"
-                        android:layout_width="match_parent"
-                        android:layout_height="10dp"
-                        android:layout_weight="1.43"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/banner" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -110,72 +101,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
+                    <include
+                        android:id="@+id/include_layout3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        layout="@layout/activity_loading">
+                    </include>
 
-                    <Button
-                        android:id="@+id/btnPolice"
-                        android:layout_width="match_parent"
-                        android:layout_height="90dp"
-                        android:onClick="btn_Police"
-                        android:text="지 구 대 위 치"
-                        android:textDirection="ltr" />
-
-                    <Button
-                        android:id="@+id/btnPeopleless"
-                        android:layout_width="match_parent"
-                        android:layout_height="90dp"
-                        android:onClick="btn_Peopleless"
-                        android:text="무 인 민 원 발 급 정 보" />
-
-                    <Button
-                        android:id="@+id/btnParking"
-                        android:layout_width="match_parent"
-                        android:layout_height="90dp"
-                        android:onClick="btn_Parking"
-                        android:text="주 정 차 문 자 알 림" />
-
-                    <Button
-                        android:id="@+id/btnStreetLamp"
-                        android:layout_width="match_parent"
-                        android:layout_height="90dp"
-                        android:onClick="btn_StreetLamp"
-                        android:text="가 로 등 고 장 신 고" />
-
-                    <Button
-                        android:id="@+id/btnHall"
-                        android:layout_width="match_parent"
-                        android:layout_height="90dp"
-                        android:onClick="btn_Hall"
-                        android:text="강 당 무 료 사 용 신 청" />
-                    <ImageView
-                        android:id="@+id/imageView3"
-                        android:layout_width="match_parent"
-                        android:layout_height="10dp"
-                        android:layout_weight="1.43"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/banner"
-                        tools:ignore="DuplicateIds" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/tab4"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <ListView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" />
-                    <ImageView
-                        android:id="@+id/imageView3"
-                        android:layout_width="match_parent"
-                        android:layout_height="10dp"
-                        android:layout_weight="1.43"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/banner"
-                        tools:ignore="DuplicateIds" />
                 </LinearLayout>
             </FrameLayout>
         </LinearLayout>
     </TabHost>
-</LinearLayout>
+</android.support.v4.widget.DrawerLayout>

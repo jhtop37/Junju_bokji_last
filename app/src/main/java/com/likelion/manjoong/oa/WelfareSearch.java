@@ -9,7 +9,8 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
-
+import android.view.View.OnClickListener;
+import android.widget.Button;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserFactory;
 
@@ -42,11 +43,11 @@ public class WelfareSearch extends Activity {
         setTitle("맞춤 복지");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welfare_search);
-        LinearLayout woman = (LinearLayout)findViewById(R.id.woman);
-        LinearLayout child = (LinearLayout)findViewById(R.id.child);
-        LinearLayout oldman = (LinearLayout)findViewById(R.id.oldman);
-        LinearLayout studen = (LinearLayout)findViewById(R.id.student);
-        LinearLayout handicapped = (LinearLayout)findViewById(R.id.handicapped);
+        Button woman = (Button)findViewById(R.id.btn_woman);
+        Button child = (Button)findViewById(R.id.btn_child);
+        Button oldman = (Button)findViewById(R.id.btn_oldman);
+        Button studen = (Button)findViewById(R.id.btn_student);
+        Button handicapped = (Button)findViewById(R.id.btn_handicapped);
 //        text= (TextView)findViewById(R.id.result); //보여줄 창 선언
 
         woman.setOnClickListener(new View.OnClickListener() {
@@ -67,7 +68,7 @@ public class WelfareSearch extends Activity {
                             public void run() {
                                 // TODO Auto-generated method stub
                                 if(first){
-                                init();
+                                    init();
                                     first = false;}else{
                                     init();
                                     reload();
@@ -86,7 +87,7 @@ public class WelfareSearch extends Activity {
         child.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               str = "유아";
+                str = "유아";
                 //Android 4.0 이상 부터는 네트워크를 이용할 때 반드시 Thread 사용해야 함
                 new Thread(new Runnable() {
 
@@ -119,7 +120,7 @@ public class WelfareSearch extends Activity {
         oldman.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               str = "노인";
+                str = "노인";
                 //Android 4.0 이상 부터는 네트워크를 이용할 때 반드시 Thread 사용해야 함
                 new Thread(new Runnable() {
 
@@ -433,7 +434,3 @@ public class WelfareSearch extends Activity {
     }//getXmlData method....
 
 }//MainActivity class..
-
-
-
-

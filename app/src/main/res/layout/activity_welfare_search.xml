@@ -3,13 +3,12 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:background="@color/mainColor"
     >
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="9.2"
-        android:background="@drawable/border"
-
         >
 
         <FrameLayout
@@ -24,7 +23,6 @@
 
         </FrameLayout>
     </LinearLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -38,11 +36,14 @@
             android:layout_weight="1"
             android:orientation="horizontal"
             android:gravity="center"
-            android:background="@drawable/press">
-            <ImageView
-                android:src="@drawable/woman"
+            android:background="@color/colorPrimary">
+            <Button
+                android:id="@+id/btn_woman"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:text="여 성" />
+
         </LinearLayout>
         <LinearLayout
             android:id="@+id/child"
@@ -51,11 +52,13 @@
             android:layout_weight="1"
             android:orientation="horizontal"
             android:gravity="center"
-            android:background="@drawable/press">
-            <ImageView
-                android:src="@drawable/child"
+            android:background="@color/colorPrimary">
+            <Button
+                android:id="@+id/btn_child"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:text="유 아" />
         </LinearLayout>
         <LinearLayout
             android:id="@+id/oldman"
@@ -64,11 +67,13 @@
             android:layout_weight="1"
             android:orientation="horizontal"
             android:gravity="center"
-            android:background="@drawable/press">
-            <ImageView
-                android:src="@drawable/oldman"
+            android:background="@color/colorPrimary">
+            <Button
+                android:id="@+id/btn_oldman"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:text="노 인" />
         </LinearLayout>
         <LinearLayout
             android:id="@+id/student"
@@ -77,11 +82,13 @@
             android:layout_weight="1"
             android:orientation="horizontal"
             android:gravity="center"
-            android:background="@drawable/press">
-            <ImageView
-                android:src="@drawable/student"
+            android:background="@color/colorPrimary">
+            <Button
+                android:id="@+id/btn_student"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:text="학 생" />
         </LinearLayout>
         <LinearLayout
             android:id="@+id/handicapped"
@@ -90,16 +97,14 @@
             android:layout_weight="1"
             android:orientation="horizontal"
             android:gravity="center"
-            android:background="@drawable/press">
-            <ImageView
-                android:src="@drawable/handicapped"
+            android:background="@color/colorPrimary">
+            <Button
+                android:id="@+id/btn_handicapped"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:text="장 애 인" />
         </LinearLayout>
 
     </LinearLayout>
-
 </LinearLayout>
-
-
-
