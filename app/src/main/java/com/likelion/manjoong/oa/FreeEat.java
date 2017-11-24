@@ -20,7 +20,6 @@ import org.xmlpull.v1.XmlPullParserFactory;
 
 import java.io.InputStream;
 
-
 public class FreeEat extends AppCompatActivity
         implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
 
@@ -33,11 +32,6 @@ public class FreeEat extends AppCompatActivity
         MapFragment mapFragment = (MapFragment)fragmentManager
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-
-
-
-
-
 
     }
 
@@ -138,10 +132,6 @@ public class FreeEat extends AppCompatActivity
                             googleMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(latitude, longitude)));
                             googleMap.moveCamera(CameraUpdateFactory.newLatLng(SEOUL));
                             googleMap.animateCamera(CameraUpdateFactory.zoomTo(12));
-
-
-
-
                         }
                         break;
                 }

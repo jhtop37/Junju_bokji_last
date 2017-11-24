@@ -1,33 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:title="Application">
+    <item android:title="민 원 , 생 활">
         <menu>
             <item
-                android:id="@+id/first"
+                android:id="@+id/peopleless"
                 android:icon="@android:drawable/ic_menu_agenda"
-                android:title="공지사항" />
+                android:title="무인 민원발급 서비스"/>
             <item
-                android:id="@+id/second"
-                android:icon="@android:drawable/ic_menu_edit"
-                android:title="사진" />
-            <item
-                android:id="@+id/third"
+                android:id="@+id/police"
                 android:icon="@android:drawable/ic_menu_gallery"
-                android:title="정보수정" />
+                android:title="주변 지구대 찾기"/>
+            <item
+                android:id="@+id/lost_item"
+                android:icon="@drawable/lostitems"
+                android:title="분실물 찾기"/>
+            <item
+                android:id="@+id/stop_car"
+                android:icon="@drawable/lostitems"
+                android:title="주정차 문자 알림 서비스"/>
         </menu>
     </item>
-    <item android:title="Preference">
+    <item android:title="교 육">
         <menu>
             <item
-                android:id="@+id/forth"
+                android:id="@+id/education"
                 android:icon="@android:drawable/ic_menu_preferences"
-                android:title="환경설정" />
-
+                android:title="교육 프로그램 현황"/>
+            <item
+                android:id="@+id/education2"
+                android:icon="@android:drawable/ic_menu_preferences"
+                android:title="평생 학습 강좌 정보"/>
+            <item
+                android:id="@+id/new_book"
+                android:icon="@android:drawable/ic_menu_preferences"
+                android:title="신간 도서 정보"/>
         </menu>
-
     </item>
+    <item android:title="문 화">
+        <menu>
+            <item
+                android:id="@+id/festival"
+                android:icon="@android:drawable/ic_menu_preferences"
+                android:title="전주시 문화축제 캘린더"/>
+        </menu>
+    </item>
+
+
 </menu>
-
-
-

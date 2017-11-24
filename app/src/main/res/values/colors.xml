@@ -3,7 +3,9 @@
     <color name="colorPrimary">#a4c72f</color>
     <color name="colorPrimaryDark">#A4C72F</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="mainColor">#FFFFFF</color>
-    <color name="textColor">#68777a</color>
+    <color name="windowBackground">#FFFFFF</color>
+    <color name="navigationBarColor">#A4C72F</color>
+    <color name="mainColor">#ffffff</color>
+    <color name="textColor">#099EDC</color>
     <color name="middleColor">#bdbdbe</color>
 </resources>

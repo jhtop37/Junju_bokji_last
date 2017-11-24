@@ -6,110 +6,71 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/drawer_layout">
-    >
+
     <android.support.design.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-    <android.support.design.widget.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        <include layout="@layout/tool_bar"></include>
-    </android.support.design.widget.AppBarLayout>
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <include
+            layout="@layout/tool_bar"/>
+        </android.support.design.widget.AppBarLayout>
 
         <FrameLayout
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
             android:id="@+id/main_framelayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-        </FrameLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
+                <android.support.design.widget.TabLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    app:tabBackground="@color/colorPrimary"
+                    app:tabGravity="center"
+                    app:tabMode="fixed"
+                    app:tabSelectedTextColor="@android:color/white"
+                    app:tabTextColor="@android:color/white">
+
+                    <android.support.design.widget.TabItem
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="복지정보 서비스"
+                        android:textColor="@android:color/black" />
+
+                    <android.support.design.widget.TabItem
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/mainColor"
+                        android:text="복 지 시 설 현 황"
+                        android:textColor="@android:color/black" />
+
+                    <android.support.design.widget.TabItem
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/mainColor"
+                        android:backgroundTint="@color/mainColor"
+                        android:text="무 료 급 식 소"
+                        android:textColor="@android:color/black" />
+                </android.support.design.widget.TabLayout>
+            </LinearLayout>
+
+        </FrameLayout>
     </android.support.design.widget.CoordinatorLayout>
 
     <android.support.design.widget.NavigationView
         android:id="@+id/main_navigationView"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_gravity = "start"
-        app:headerLayout="@layout/sidebar"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/side_bar"
         app:menu="@menu/nav_item">
+
     </android.support.design.widget.NavigationView>
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/my_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
-    <TabHost
-        android:id="@+id/tabHost1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            >
-
-            <TabWidget
-                android:id="@android:id/tabs"
-                android:layout_width="match_parent"
-                android:layout_height="42dp"
-                android:layout_alignParentBottom="true"
-                android:background="@color/colorPrimary" />
-
-            <FrameLayout
-                android:id="@android:id/tabcontent"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                >
-
-                <LinearLayout
-                    android:id="@+id/tab1"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-                    <include
-                        android:id="@+id/include_layout1"
-                        android:layout_width="fill_parent"
-                        android:layout_height="fill_parent"
-                        layout="@layout/activity_welfare_search">
-                    </include>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/tab2"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:layout_weight="10"
-                    >
-                    <include
-                        android:id="@+id/include_layout2"
-                        android:layout_width="fill_parent"
-                        android:layout_height="fill_parent"
-                        layout="@layout/activity_welfare_facility_search">
-                    </include>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/tab3"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-                    <include
-                        android:id="@+id/include_layout3"
-                        android:layout_width="fill_parent"
-                        android:layout_height="fill_parent"
-                        layout="@layout/activity_loading">
-                    </include>
-
-                </LinearLayout>
-            </FrameLayout>
-        </LinearLayout>
-    </TabHost>
 </android.support.v4.widget.DrawerLayout>

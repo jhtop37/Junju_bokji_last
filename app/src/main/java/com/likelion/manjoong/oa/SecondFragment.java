@@ -1,9 +1,5 @@
 package com.likelion.manjoong.oa;
 
-/**
- * Created by YuJiHyun on 2017-11-22.
- */
-
 import android.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -12,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 /**
- * Created by MANJOONG on 2017-09-23.
+ * Created by YuJiHyun on 2017-11-24.
  */
 
 public class SecondFragment extends Fragment {
