@@ -52,7 +52,6 @@ public class PeoplelessActivity extends AppCompatActivity
         String queryUrl="http://openapi.jeonju.go.kr/rest/autodispenser/getAutoDispenser?authApiKey=8rULtNWhTcB9%2FM2fsJHpyZqt%2FK94LqQWfNl9QTmvLKP56PotRCl8iO2yOaYnxffLg7nG8qHsMPLIijmqenTyrg%3D%3D";//요청 URL
 
 
-
         try{
             URL url= new URL(queryUrl);//문자열로 된 요청 url을 URL 객체로 생성.
             InputStream is= url.openStream(); //url위치로 입력스트림 연결

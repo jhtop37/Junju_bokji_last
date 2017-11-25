@@ -38,12 +38,14 @@
                     app:tabTextColor="@android:color/white">
 
                     <android.support.design.widget.TabItem
+                        android:id="@+id/welfare_search_tab"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="복지정보 서비스"
+                        android:text="복 지 정 보 서비스"
                         android:textColor="@android:color/black" />
 
                     <android.support.design.widget.TabItem
+                        welfare_search_tab
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@color/mainColor"
@@ -55,7 +57,7 @@
                         android:layout_height="wrap_content"
                         android:background="@color/mainColor"
                         android:backgroundTint="@color/mainColor"
-                        android:text="무 료 급 식 소"
+                        android:text="무 료 급 식 소 위 치"
                         android:textColor="@android:color/black" />
                 </android.support.design.widget.TabLayout>
             </LinearLayout>

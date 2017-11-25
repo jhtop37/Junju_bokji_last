@@ -8,6 +8,10 @@
                 android:icon="@android:drawable/ic_menu_agenda"
                 android:title="무인 민원발급 서비스"/>
             <item
+                android:id="@+id/stop_car"
+                android:icon="@drawable/lostitems"
+                android:title="민원 24 바로가기"/>
+            <item
                 android:id="@+id/police"
                 android:icon="@android:drawable/ic_menu_gallery"
                 android:title="주변 지구대 찾기"/>
@@ -15,26 +19,22 @@
                 android:id="@+id/lost_item"
                 android:icon="@drawable/lostitems"
                 android:title="분실물 찾기"/>
-            <item
-                android:id="@+id/stop_car"
-                android:icon="@drawable/lostitems"
-                android:title="주정차 문자 알림 서비스"/>
         </menu>
     </item>
     <item android:title="교 육">
         <menu>
             <item
-                android:id="@+id/education"
+                android:id="@+id/new_book"
                 android:icon="@android:drawable/ic_menu_preferences"
-                android:title="교육 프로그램 현황"/>
+                android:title="전주 시립 도서관"/>
             <item
                 android:id="@+id/education2"
                 android:icon="@android:drawable/ic_menu_preferences"
                 android:title="평생 학습 강좌 정보"/>
             <item
-                android:id="@+id/new_book"
+                android:id="@+id/education"
                 android:icon="@android:drawable/ic_menu_preferences"
-                android:title="신간 도서 정보"/>
+                android:title="교육 프로그램 현황"/>
         </menu>
     </item>
     <item android:title="문 화">
@@ -45,6 +45,4 @@
                 android:title="전주시 문화축제 캘린더"/>
         </menu>
     </item>
-
-
 </menu>

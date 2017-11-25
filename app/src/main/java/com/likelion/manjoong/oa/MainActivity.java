@@ -20,9 +20,10 @@ import java.lang.reflect.GenericArrayType;
 import android.net.Uri;
 
 public class MainActivity extends AppCompatActivity {
-    private DrawerLayout drawerLayout;
 
+    private DrawerLayout drawerLayout;
     Context context = MainActivity.this;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,9 +32,6 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar)findViewById(R.id.tool_bar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
-
-
-
 
         toolbar.findViewById(R.id.toolbar_email).setOnClickListener(new View.OnClickListener(){
           @Override
@@ -61,22 +59,22 @@ public class MainActivity extends AppCompatActivity {
                     getFragmentManager().beginTransaction().replace(R.id.main_framelayout,new SecondFragment()).commit();
                 }
                 if(item.getItemId() == R.id.lost_item){
-                    getFragmentManager().beginTransaction().replace(R.id.main_framelayout,new SecondFragment()).commit();
+                    getFragmentManager().beginTransaction().replace(R.id.main_framelayout,new LostItemActivity()).commit();
                 }
                 if(item.getItemId() == R.id.stop_car){
-                    getFragmentManager().beginTransaction().replace(R.id.main_framelayout,new SecondFragment()).commit();
+                    getFragmentManager().beginTransaction().replace(R.id.main_framelayout,new StopCarActivity()).commit();
                 }
                 if(item.getItemId() == R.id.education){
-                    getFragmentManager().beginTransaction().replace(R.id.main_framelayout,new SecondFragment()).commit();
+                    getFragmentManager().beginTransaction().replace(R.id.main_framelayout,new EducationActivity()).commit();
                 }
                 if(item.getItemId() == R.id.education2){
-                    getFragmentManager().beginTransaction().replace(R.id.main_framelayout,new SecondFragment()).commit();
+                    getFragmentManager().beginTransaction().replace(R.id.main_framelayout,new Education2Activity()).commit();
                 }
                 if(item.getItemId() == R.id.new_book){
-                    getFragmentManager().beginTransaction().replace(R.id.main_framelayout,new SecondFragment()).commit();
+                    getFragmentManager().beginTransaction().replace(R.id.main_framelayout,new NewBookActivity()).commit();
                 }
                 if(item.getItemId() == R.id.festival){
-                    getFragmentManager().beginTransaction().replace(R.id.main_framelayout,new SecondFragment()).commit();
+                    getFragmentManager().beginTransaction().replace(R.id.main_framelayout,new FestivalActivity()).commit();
                 }
                 drawerLayout.closeDrawer(GravityCompat.START);
                 return false;
