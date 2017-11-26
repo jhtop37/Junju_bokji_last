@@ -26,40 +26,71 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
-
-                <android.support.design.widget.TabLayout
+                <TabHost
+                    android:id="@+id/tabhost"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@color/colorPrimary"
-                    app:tabBackground="@color/colorPrimary"
-                    app:tabGravity="center"
-                    app:tabMode="fixed"
-                    app:tabSelectedTextColor="@android:color/white"
-                    app:tabTextColor="@android:color/white">
+                    android:layout_height="match_parent">
 
-                    <android.support.design.widget.TabItem
-                        android:id="@+id/welfare_search_tab"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="복 지 정 보 서비스"
-                        android:textColor="@android:color/black" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
 
-                    <android.support.design.widget.TabItem
-                        welfare_search_tab
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@color/mainColor"
-                        android:text="복 지 시 설 현 황"
-                        android:textColor="@android:color/black" />
+                        <TabWidget
+                            android:id="@android:id/tabs"
+                            style="@android:style/Widget.DeviceDefault.Light.TabWidget"
+                            android:layout_width="match_parent"
+                            android:layout_height="43dp"
+                            android:background="@color/colorPrimary" />
 
-                    <android.support.design.widget.TabItem
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@color/mainColor"
-                        android:backgroundTint="@color/mainColor"
-                        android:text="무 료 급 식 소 위 치"
-                        android:textColor="@android:color/black" />
-                </android.support.design.widget.TabLayout>
+                        <FrameLayout
+                            android:id="@android:id/tabcontent"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:id="@+id/tab1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:textColor="@android:color/white" >
+                                <include
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent"
+                                    layout="@layout/activity_welfare_search">
+                                </include>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/tab2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:textColor="@android:color/white" >
+                                <include
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent"
+                                    layout="@layout/activity_welfare_facility_search">
+                                </include>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/tab3"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:textColor="@android:color/white" >
+                                <include
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent"
+                                    layout="@layout/activity_welfare_search">
+                                </include>
+                            </LinearLayout>
+                        </FrameLayout>
+                    </LinearLayout>
+                </TabHost>
             </LinearLayout>
 
         </FrameLayout>

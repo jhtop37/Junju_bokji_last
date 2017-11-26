@@ -5,19 +5,19 @@
         <menu>
             <item
                 android:id="@+id/peopleless"
-                android:icon="@android:drawable/ic_menu_agenda"
+                android:icon="@drawable/ic_content_copy_black_24dp"
                 android:title="무인 민원발급 서비스"/>
             <item
                 android:id="@+id/stop_car"
-                android:icon="@drawable/lostitems"
+                android:icon="@drawable/ic_directions_run_black_24dp"
                 android:title="민원 24 바로가기"/>
             <item
                 android:id="@+id/police"
-                android:icon="@android:drawable/ic_menu_gallery"
+                android:icon="@drawable/ic_place_black_24dp"
                 android:title="주변 지구대 찾기"/>
             <item
                 android:id="@+id/lost_item"
-                android:icon="@drawable/lostitems"
+                android:icon="@drawable/ic_live_help_black_24dp"
                 android:title="분실물 찾기"/>
         </menu>
     </item>
@@ -25,15 +25,15 @@
         <menu>
             <item
                 android:id="@+id/new_book"
-                android:icon="@android:drawable/ic_menu_preferences"
+                android:icon="@drawable/ic_local_library_black_24dp"
                 android:title="전주 시립 도서관"/>
             <item
                 android:id="@+id/education2"
-                android:icon="@android:drawable/ic_menu_preferences"
+                android:icon="@drawable/ic_import_contacts_black_24dp"
                 android:title="평생 학습 강좌 정보"/>
             <item
                 android:id="@+id/education"
-                android:icon="@android:drawable/ic_menu_preferences"
+                android:icon="@drawable/ic_create_black_24dp"
                 android:title="교육 프로그램 현황"/>
         </menu>
     </item>
@@ -41,7 +41,7 @@
         <menu>
             <item
                 android:id="@+id/festival"
-                android:icon="@android:drawable/ic_menu_preferences"
+                android:icon="@drawable/ic_date_range_black_24dp"
                 android:title="전주시 문화축제 캘린더"/>
         </menu>
     </item>

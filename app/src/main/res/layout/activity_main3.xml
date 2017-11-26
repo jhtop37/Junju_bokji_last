@@ -23,18 +23,6 @@
             android:layout_marginTop="10dp"
             android:padding="3dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textname"
-                android:gravity="center"
-                android:layout_span="2"
-                android:layout_weight="1"
-                android:textSize="18dp"
-                android:text="이름"
-                android:textStyle="bold"
-                />
-
         </TableRow>
 
         <TableRow
@@ -187,6 +175,17 @@
 
         </TableRow>
     </TableLayout>
+
+        <TextView
+            android:id="@+id/textname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_span="2"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="이름"
+            android:textSize="18dp"
+            android:textStyle="bold" />
     </ScrollView>
 
 
