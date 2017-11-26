@@ -1,30 +1,22 @@
 package com.likelion.manjoong.oa;
 
-import android.app.Fragment;
+import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.TabItem;
-import android.support.design.widget.TabLayout;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.content.Context;
-import android.os.Bundle;
-
+import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.widget.TableLayout;
+import android.view.View;
+import android.widget.TabHost;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.view.View;
-import android.support.v7.widget.Toolbar;
-import java.lang.reflect.GenericArrayType;
-import android.widget.TabHost;
-
-import android.widget.TabHost;
 
 //url웹뷰 추강ㅎㅎ
-import android.net.Uri;
 
 public class MainActivity extends AppCompatActivity {
     private DrawerLayout drawerLayout;
@@ -40,20 +32,19 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
+        toolbar.findViewById(R.id.main_logo).setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
         toolbar.findViewById(R.id.toolbar_email).setOnClickListener(new View.OnClickListener(){
           @Override
             public void onClick(View view){
-              Toast.makeText(MainActivity.this, "아직 도착안했다이미마", Toast.LENGTH_SHORT).show();
+              Toast.makeText(MainActivity.this, "전주시청 대표전화 063-222-1000 \n팩스 063-281-5000", Toast.LENGTH_SHORT).show();
           }
-        });
-
-
-        txt1 = (TextView)findViewById(R.id.main_logo);       // 텍스트 뷰 연결
-
-        findViewById(R.id.main_logo).setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                // 버튼 클릭 시 이벤트
-            }
         });
 
         TabHost tabs = (TabHost)findViewById(R.id.tabhost);
@@ -87,16 +78,18 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item){
 
                 if(item.getItemId() == R.id.peopleless){
-                    getFragmentManager().beginTransaction().replace(R.id.main_framelayout,new FirstFragment()).commit();
-                }
-                if(item.getItemId() == R.id.police){
-                    getFragmentManager().beginTransaction().replace(R.id.main_framelayout,new SecondFragment()).commit();
-                }
-                if(item.getItemId() == R.id.lost_item){
-                    getFragmentManager().beginTransaction().replace(R.id.main_framelayout,new LostItemActivity()).commit();
+                    Intent intent = new Intent(getApplicationContext(), PeoplelessActivity.class);
+                    startActivity(intent);
                 }
                 if(item.getItemId() == R.id.stop_car){
                     getFragmentManager().beginTransaction().replace(R.id.main_framelayout,new StopCarActivity()).commit();
+                }
+                if(item.getItemId() == R.id.police){
+                    Intent intent = new Intent(getApplicationContext(), PoliceActivity.class);
+                    startActivity(intent);
+                }
+                if(item.getItemId() == R.id.lost_item){
+                    getFragmentManager().beginTransaction().replace(R.id.main_framelayout,new LostItemActivity()).commit();
                 }
                 if(item.getItemId() == R.id.education){
                     getFragmentManager().beginTransaction().replace(R.id.main_framelayout,new EducationActivity()).commit();
