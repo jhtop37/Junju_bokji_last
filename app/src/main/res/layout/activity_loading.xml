@@ -13,7 +13,7 @@
                 android:adjustViewBounds="true"
                 android:scaleType="fitXY"
                 android:cropToPadding="true"
-                android:src="@drawable/loading_green" />
+                android:src="@drawable/loading_smile" />
 
 </LinearLayout>
 

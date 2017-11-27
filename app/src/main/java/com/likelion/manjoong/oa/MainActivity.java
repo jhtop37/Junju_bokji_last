@@ -15,7 +15,7 @@ import android.view.View;
 import android.widget.TabHost;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import android.widget.Button;
 //url웹뷰 추강ㅎㅎ
 
 public class MainActivity extends AppCompatActivity {
@@ -47,25 +47,33 @@ public class MainActivity extends AppCompatActivity {
           }
         });
 
-        TabHost tabs = (TabHost)findViewById(R.id.tabhost);
-        tabs.setup();
+        Button btnServiceSearch = (Button) findViewById(R.id.btnServiceSearch);
+        btnServiceSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(getApplicationContext(),WelfareSearch.class);
+                startActivity(myIntent);
+            }
+        });
 
-        TabHost.TabSpec spec = tabs.newTabSpec("복지 소개");
-        spec.setContent(R.id.tab1);
-        spec.setIndicator("전주 복지 정보");
-        tabs.addTab(spec);
+        Button btnFreeEat = (Button) findViewById(R.id.btnFreeEat);
+        btnFreeEat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(getApplicationContext(), FreeEat.class);
+                startActivity(myIntent);
+            }
+        });
 
-        spec = tabs.newTabSpec("복지 소개");
-        spec.setContent(R.id.tab2);
-        spec.setIndicator("전주 복지 시설");
-        tabs.addTab(spec);
+        Button btnFacilitySearch = (Button) findViewById(R.id.btnFacilitySearch);
+        btnFacilitySearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(getApplicationContext(), WelfareFacilitySearch.class);
+                startActivity(myIntent);
+            }
+        });
 
-        spec = tabs.newTabSpec("복지 소개");
-        spec.setContent(R.id.tab3);
-        spec.setIndicator("전주 무료 급식소");
-        tabs.addTab(spec);
-
-        tabs.setCurrentTab(0);
 
         final DrawerLayout drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,0,0);
@@ -91,6 +99,16 @@ public class MainActivity extends AppCompatActivity {
                 if(item.getItemId() == R.id.lost_item){
                     getFragmentManager().beginTransaction().replace(R.id.main_framelayout,new LostItemActivity()).commit();
                 }
+                if(item.getItemId() == R.id.education_support){
+                    getFragmentManager().beginTransaction().replace(R.id.main_framelayout,new EducationSupprotActivity()).commit();
+                }
+                if(item.getItemId() == R.id.university_support){
+                    getFragmentManager().beginTransaction().replace(R.id.main_framelayout,new UniversitySupportActivity()).commit();
+                }
+                if(item.getItemId() == R.id.academic_support_info){
+                    getFragmentManager().beginTransaction().replace(R.id.main_framelayout,new AcademicSupportActivity()).commit();
+                }
+
                 if(item.getItemId() == R.id.education){
                     getFragmentManager().beginTransaction().replace(R.id.main_framelayout,new EducationActivity()).commit();
                 }

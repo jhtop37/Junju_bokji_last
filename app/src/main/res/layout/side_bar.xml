@@ -5,11 +5,7 @@
     android:layout_height="60dp"
     android:background="@color/colorPrimary"
     android:gravity="center_vertical">
-    <ImageView
-        android:src="@mipmap/ic_launcher"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"/>
+
     <TextView
         android:textColor="@android:color/white"
         android:text="생 활 정 보"

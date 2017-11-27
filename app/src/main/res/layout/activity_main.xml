@@ -13,86 +13,55 @@
         <android.support.design.widget.AppBarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-        <include
-            layout="@layout/tool_bar"/>
+            <include
+                layout="@layout/tool_bar"/>
         </android.support.design.widget.AppBarLayout>
 
         <FrameLayout
-            app:layout_behavior="@string/appbar_scrolling_view_behavior"
             android:id="@+id/main_framelayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/contents_smile" />
+
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-                <TabHost
-                    android:id="@+id/tabhost"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
+                <Button
+                    android:id="@+id/btnServiceSearch"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimary"
+                    android:textColor="@android:color/white"
+                    android:text="복지 서비스 정보" />
 
-                        <TabWidget
-                            android:id="@android:id/tabs"
-                            style="@android:style/Widget.DeviceDefault.Light.TabWidget"
-                            android:layout_width="match_parent"
-                            android:layout_height="43dp"
-                            android:background="@color/colorPrimary" />
+                <Button
+                    android:id="@+id/btnFacilitySearch"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimary"
+                    android:textColor="@android:color/white"
+                    android:text="복지 시설 정보" />
 
-                        <FrameLayout
-                            android:id="@android:id/tabcontent"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent">
-
-                            <LinearLayout
-                                android:id="@+id/tab1"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:orientation="vertical"
-                                android:textColor="@android:color/white" >
-                                <include
-                                    android:layout_width="fill_parent"
-                                    android:layout_height="fill_parent"
-                                    layout="@layout/activity_welfare_search">
-                                </include>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:id="@+id/tab2"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:orientation="vertical"
-                                android:textColor="@android:color/white" >
-                                <include
-                                    android:layout_width="fill_parent"
-                                    android:layout_height="fill_parent"
-                                    layout="@layout/activity_welfare_facility_search">
-                                </include>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:id="@+id/tab3"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:orientation="vertical"
-                                android:textColor="@android:color/white" >
-                                <include
-                                    android:layout_width="fill_parent"
-                                    android:layout_height="fill_parent"
-                                    layout="@layout/activity_welfare_search">
-                                </include>
-                            </LinearLayout>
-                        </FrameLayout>
-                    </LinearLayout>
-                </TabHost>
+                <Button
+                    android:id="@+id/btnFreeEat"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimary"
+                    android:textColor="@android:color/white"
+                    android:text="무료 급식소 정보" />
             </LinearLayout>
-
         </FrameLayout>
     </android.support.design.widget.CoordinatorLayout>
 

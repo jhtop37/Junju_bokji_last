@@ -24,6 +24,19 @@
     <item android:title="교 육">
         <menu>
             <item
+                android:id="@+id/education_support"
+                android:icon="@drawable/ic_chat_black_24dp"
+                android:title="교육 지원 정보"/>
+            <item
+                android:id="@+id/university_support"
+                android:icon="@drawable/ic_person_add_black_24dp"
+                android:title="대학생 학자금대출 이자지원"/>
+            <item
+                android:id="@+id/academic_support_info"
+                android:icon="@drawable/ic_business_black_24dp"
+                android:title="풍남 학사 정보"/>
+
+            <item
                 android:id="@+id/new_book"
                 android:icon="@drawable/ic_local_library_black_24dp"
                 android:title="전주 시립 도서관"/>

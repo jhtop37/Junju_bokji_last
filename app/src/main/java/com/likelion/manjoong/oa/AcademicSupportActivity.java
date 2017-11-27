@@ -9,24 +9,26 @@ import android.view.ViewGroup;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+
 /**
  * Created by YuJiHyun on 2017-11-25.
  */
-public class FirstFragment extends Fragment{
+public class AcademicSupportActivity extends Fragment{
     private View rootView;
     WebView mWeb;
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedIinstanceState){
         Log.e("here", "m.m2");
 
-        rootView = inflater.inflate(R.layout.activity_education_support, container, false);
+        rootView = inflater.inflate(R.layout.activity_academic, container, false);
         Log.e("here", "m.m");
 
-        mWeb = (WebView)rootView. findViewById(R.id.webview_education_support);
+        mWeb = (WebView)rootView. findViewById(R.id.webview_academic);
         mWeb.setWebViewClient(new MyWebClient());
         WebSettings set = mWeb.getSettings();
         set.setJavaScriptEnabled(true);
         set.setBuiltInZoomControls(true);
-        mWeb.loadUrl("https://www.google.com/maps/d/viewer?hl=ko&mid=1wl5j_FKgaJxEBwPsdIEy006asoU&ll=35.818223811025035%2C127.11472609999998&z=12");
+        mWeb.loadUrl("http://www.jeonju.go.kr/index.9is?contentUid=9be517a74f8dee91014f95ae378f1490#start");
+
         return rootView;
     }
 
@@ -37,3 +39,4 @@ public class FirstFragment extends Fragment{
         }
     }
 }
+

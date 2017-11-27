@@ -35,8 +35,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
-
-
 public class PoliceActivity extends AppCompatActivity
         implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
     private DrawerLayout drawerLayout;
@@ -85,6 +83,16 @@ public class PoliceActivity extends AppCompatActivity
                 if(item.getItemId() == R.id.lost_item){
                     getFragmentManager().beginTransaction().replace(R.id.main_framelayout,new LostItemActivity()).commit();
                 }
+                if(item.getItemId() == R.id.education_support){
+                    getFragmentManager().beginTransaction().replace(R.id.main_framelayout,new EducationSupprotActivity()).commit();
+                }
+                if(item.getItemId() == R.id.university_support){
+                    getFragmentManager().beginTransaction().replace(R.id.main_framelayout,new UniversitySupportActivity()).commit();
+                }
+                if(item.getItemId() == R.id.academic_support_info){
+                    getFragmentManager().beginTransaction().replace(R.id.main_framelayout,new AcademicSupportActivity()).commit();
+                }
+
                 if(item.getItemId() == R.id.education){
                     getFragmentManager().beginTransaction().replace(R.id.main_framelayout,new EducationActivity()).commit();
                 }
@@ -102,15 +110,11 @@ public class PoliceActivity extends AppCompatActivity
             }
         });
 
-
-
         FragmentManager fragmentManager = getFragmentManager();
         MapFragment mapFragment = (MapFragment)fragmentManager
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-
     }
-
 
     @Override
     public void onMapReady(final GoogleMap googleMap) {

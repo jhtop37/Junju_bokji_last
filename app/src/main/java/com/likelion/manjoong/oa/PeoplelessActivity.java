@@ -84,6 +84,16 @@ public class PeoplelessActivity extends AppCompatActivity
                 if(item.getItemId() == R.id.lost_item){
                     getFragmentManager().beginTransaction().replace(R.id.main_framelayout,new LostItemActivity()).commit();
                 }
+                if(item.getItemId() == R.id.education_support){
+                    getFragmentManager().beginTransaction().replace(R.id.main_framelayout,new EducationSupprotActivity()).commit();
+                }
+                if(item.getItemId() == R.id.university_support){
+                    getFragmentManager().beginTransaction().replace(R.id.main_framelayout,new UniversitySupportActivity()).commit();
+                }
+                if(item.getItemId() == R.id.academic_support_info){
+                    getFragmentManager().beginTransaction().replace(R.id.main_framelayout,new AcademicSupportActivity()).commit();
+                }
+
                 if(item.getItemId() == R.id.education){
                     getFragmentManager().beginTransaction().replace(R.id.main_framelayout,new EducationActivity()).commit();
                 }
